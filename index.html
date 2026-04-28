@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workshop 5</title>
+
+<style>
+
+/* Task 1 */
+.responsive-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  background: #eee;
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+  }
+}
+
+/* Task 2 */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Task 3 */
+.media-query-box {
+  padding: 20px;
+  text-align: center;
+  background-color: lightblue;
+}
+
+@media (max-width: 600px) {
+  .media-query-box {
+    background-color: lightcoral;
+  }
+}
+
+/* Task 4 */
+.responsive-nav {
+  background: #333;
+  padding: 10px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  padding: 0;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 8px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Task 1: Layout</h2>
+<div class="responsive-container">
+  <div class="column">Column 1</div>
+  <div class="column">Column 2</div>
+</div>
+
+<h2>Task 2: Image</h2>
+<img src="https://picsum.photos/800/300" class="responsive-image">
+
+<h2>Task 3: Media Query</h2>
+<div class="media-query-box">
+  Resize window
+</div>
+
+<h2>Task 4: Navigation</h2>
+<nav class="responsive-nav">
+  <button class="menu-toggle">☰ Menu</button>
+  <ul class="nav-list">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>
